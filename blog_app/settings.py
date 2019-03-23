@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     #my apps
     'blog',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+LOGIN_REDIRECT_URL = 'home' # after login user is redirected to the url named 'home' at blog.urls.py
+LOGOUT_REDIRECT_URL = 'home'
